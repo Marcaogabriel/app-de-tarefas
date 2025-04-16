@@ -1,0 +1,44 @@
+Como eu fiz a aplicação "Today"
+Esse projeto foi uma aplicação de lista de tarefas que eu criei com React, com o objetivo de adicionar tarefas, excluir tarefas e contar quantas foram concluídas. Além disso, a cada 5 segundos, uma citação aleatória de Chuck Norris é exibida para dar aquele toque especial.
+
+1. Começando o projeto
+Primeiro, criei o projeto com create-react-app para gerar a estrutura inicial. Não sabia muito bem o que estava fazendo, então demorei um pouco para entender como configurar tudo. Depois, comecei a trabalhar no layout e na lógica do aplicativo.
+
+2. Gerenciando os estados
+No começo, me deparei com a necessidade de usar o useState para armazenar e atualizar as tarefas. Eu criei os seguintes estados:
+
+- tasks para armazenar a lista de tarefas.
+
+- title e description para os dados das tarefas.
+
+- quote para armazenar as citações de Chuck Norris.
+
+- finishedCount para contar as tarefas que foram deletadas.
+
+Foi um pouco confuso entender como organizar esses estados, mas depois de algumas pesquisas, consegui aplicar tudo corretamente.
+
+3. Usando o useEffect para carregar dados
+Eu usei o useEffect para carregar os dados do localStorage quando o aplicativo inicializasse, garantindo que as tarefas não se perdessem ao recarregar a página. Também usei outro useEffect para fazer a chamada à API do Chuck Norris, que atualiza a citação a cada 5 segundos. Essa parte foi um desafio porque eu nunca tinha usado esse tipo de intervalo antes, então precisei estudar como manipular isso corretamente.
+
+4. Adicionando e excluindo tarefas
+Para adicionar tarefas, eu criei uma função addTask, que verifica se o título não está vazio e, se não estiver, adiciona a tarefa à lista. Ao adicionar a tarefa, o título e a descrição são limpos, o que foi simples de implementar. Já a exclusão das tarefas foi feita com uma função deleteTask, que remove a tarefa da lista e atualiza o contador de tarefas concluídas. Essa parte foi tranquila, mas eu levei um tempo para entender a lógica de manipulação do estado corretamente, já que era necessário atualizar tanto a lista de tarefas quanto o contador.
+
+5. A citação de Chuck Norris
+Eu criei uma função para buscar a citação aleatória de Chuck Norris da API e exibi-la na tela. Para isso, utilizei o fetch para fazer a requisição assíncrona. Eu também configurei um intervalo de 5 segundos para atualizar a citação automaticamente. Houve uma dificuldade em garantir que a citação fosse exibida corretamente em tempo real, mas depois de pesquisar sobre o setInterval, consegui resolver.
+
+6. Estilizando o layout
+A parte do CSS foi interessante, mas um pouco desafiadora, pois eu queria que a interface ficasse organizada e atraente. Criei duas seções principais: uma para exibir as tarefas e outra para mostrar o contador de tarefas e o formulário de adicionar novas tarefas. No começo, a parte do layout não estava como eu queria, mas com alguns ajustes, consegui deixar tudo mais agradável visualmente.
+
+7. Desafios encontrados
+Durante o desenvolvimento, enfrentei algumas dificuldades:
+
+Compreender a manipulação do estado em React foi algo novo e desafiador, principalmente quando se tratava de arrays e objetos.
+
+A integração com o localStorage foi um desafio à parte, pois eu precisava garantir que os dados fossem carregados e salvos corretamente.
+
+A parte de trabalhar com a API do Chuck Norris e entender como fazer chamadas assíncronas também foi um desafio, principalmente quando a citação não carregava corretamente.
+
+Eu não consegui transformar em apk, tentei mas não deu eu não soube fazer e também não consegui fazer gráficos funcionais na outra tela, eu achei a biblioteca recharts, mas não soube usar o git flow e não conseguir instalar na minha maquina
+
+8. O que eu aprendi
+Aprendi bastante sobre useState, useEffect e como manipular o estado no React. Também aprendi como fazer chamadas a APIs externas e como manipular dados assíncronos de forma mais eficiente. Além disso, aprendi como organizar o layout da aplicação de forma simples e funcional, garantindo que tudo estivesse bem estruturado.
