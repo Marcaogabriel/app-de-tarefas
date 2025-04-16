@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgb(68, 68, 68);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: rgb(250, 250, 250);
+}
+
+.title span {
+  color: rgb(255, 255, 255);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.tabs button {
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  border: none;
+  background-color: rgb(41, 41, 41);
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  color: #ffffff;
+}
+
+.tabs button.active {
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+.main {
+  display: flex;
+  gap: 2rem;
+}
+
+.todo-section {
+  flex: 2;
+  background-color: rgb(41, 41, 41);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-section h2 {
+  margin-bottom: 1rem;
+}
+
+.no-task {
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task {
+  background-color: rgb(41, 41, 41);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+
+.task button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.task span {
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.quote {
+  margin-top: 2rem;
+  font-style: italic;
+  background-color: rgb(20, 20, 20);
+  padding: 1rem;
+  border-left: 4px solid rgb(10, 10, 10);
+  border-radius: 8px;
+}
+ 
+.side-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+ 
+.counter-box {
+  background-color: rgb(41, 41, 41);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.counter-box h3 {
+  margin-bottom: 1rem;
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+ 
+.form {
+  background-color: rgb(41, 41, 41);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h3 {
+  margin-bottom: 1rem;
+}
+
+.left{
+  text-align: left;
+}
+
+.form input {
+  width: 100%;
+  background-color: rgb(90, 90, 90);
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+ 
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 300px; /* Limita a altura para ativar scroll */
+  overflow-y: auto;  /* Ativa scroll vertical */
+  padding-right: 0.5rem; /* Espaço para a scrollbar */
+}
+
+/* Estilo da scrollbar */
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tabs button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .task {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .counter {
+    font-size: 2rem;
+  }
+
+  .quote {
+    font-size: 0.9rem;
+  }
+
+  .form input,
+  .form button {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+  }
+}
